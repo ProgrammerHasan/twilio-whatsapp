@@ -1,0 +1,41 @@
+{
+  "name": "programmerhasan/twilio-whatsapp",
+  "description": "A Laravel package to send WhatsApp messages and OTPs via Twilio.",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Programmer Hasan",
+      "email": "programmerhasan.s@gmail.com"
+    }
+  ],
+  "keywords": [
+    "laravel-twilio",
+    "laravel-twilio-whatsapp",
+    "laravel-twilio-whatsapp-otp",
+    "twilio-whatsapp-otp",
+    "whatsapp-otp",
+    "twilio"
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "php": "^8.0",
+    "twilio/sdk": "^8.7",
+    "illuminate/support": "~6|~7|~8|~9|^10.0|^11.0|^12.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "ProgrammerHasan\\TwilioWhatsApp\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "ProgrammerHasan\\TwilioWhatsApp\\TwilioWhatsAppServiceProvider"
+      ],
+      "aliases": {
+        "WhatsApp": "ProgrammerHasan\\TwilioWhatsApp\\Facades\\TwilioWhatsApp"
+      }
+    }
+  }
+}
