@@ -3,7 +3,7 @@
 namespace ProgrammerHasan\TwilioWhatsApp;
 
 use Illuminate\Support\ServiceProvider;
-use ProgrammerHasan\TwilioWhatsApp\Facade\TwilioWhatsApp;
+use ProgrammerHasan\TwilioWhatsApp\Products\TwilioWhatsApp;
 
 class TwilioWhatsAppServiceProvider extends ServiceProvider
 {
