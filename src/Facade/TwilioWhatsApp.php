@@ -8,6 +8,6 @@ class TwilioWhatsApp extends Facade
 {
     protected static function getFacadeAccessor(): string
     {
-        return 'twilio.whatsapp';
+        return 'TwilioWhatsApp';
     }
 }

@@ -32,10 +32,7 @@
     "laravel": {
       "providers": [
         "ProgrammerHasan\\TwilioWhatsApp\\TwilioWhatsAppServiceProvider"
-      ],
-      "aliases": {
-        "WhatsApp": "ProgrammerHasan\\TwilioWhatsApp\\Facades\\TwilioWhatsApp"
-      }
+      ]
     }
   }
 }

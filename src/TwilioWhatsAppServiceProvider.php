@@ -3,6 +3,7 @@
 namespace ProgrammerHasan\TwilioWhatsApp;
 
 use Illuminate\Support\ServiceProvider;
+use ProgrammerHasan\TwilioWhatsApp\Facade\TwilioWhatsApp;
 
 class TwilioWhatsAppServiceProvider extends ServiceProvider
 {
@@ -19,7 +20,11 @@ class TwilioWhatsAppServiceProvider extends ServiceProvider
             __DIR__ . '/../config/twilio-whatsapp.php', 'twilio-whatsapp'
         );
 
-        $this->app->singleton('twilio.whatsapp', function () {
+        $this->app->bind("TwilioWhatsApp", function () {
+            return new TwilioWhatsApp();
+        });
+
+        $this->app->singleton(TwilioWhatsAppService::class, function ($app) {
             return new TwilioWhatsAppService();
         });
     }
